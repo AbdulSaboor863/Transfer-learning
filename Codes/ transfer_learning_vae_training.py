@@ -27,8 +27,8 @@ def load_and_clean_data():
     print("Loading data...")
     print(f"RDKit version: {rdkit.__version__}")
     try:
-        source_df = pd.read_csv("D:/Transfer learning project/Book1.csv", usecols=range(26))
-        target_df = pd.read_csv("D:/Transfer learning project/MCH Target domain dataset.csv",
+        source_df = pd.read_csv("D:/Transfer learning project/Source domain.csv", usecols=range(26))
+        target_df = pd.read_csv("D:/Transfer learning project/Target domain.csv",
                                 encoding='latin1', usecols=range(26))
     except Exception as e:
         print(f"Error loading CSV: {e}")
@@ -456,3 +456,4 @@ if __name__ == '__main__':
     )
     combined_df.to_csv(os.path.join(output_dir, "combined_target_data.csv"), index=False)
     print(f"Saved combined_target_data.csv: {len(combined_df)} rows")
+
