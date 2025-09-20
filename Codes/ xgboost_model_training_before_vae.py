@@ -131,7 +131,7 @@ def validate_data(data):
 def main():
     # ----- Load Data -----
     try:
-        data = pd.read_csv(r"D:\Transfer learning project\Target.csv")
+        data = pd.read_csv(r"D:\Transfer learning project\Target domain.csv")
         print("Original data shape:", data.shape)
         print("Columns:", data.columns.tolist())
         data = validate_data(data)
@@ -239,3 +239,4 @@ def main():
 # ============================
 if __name__ == "__main__":
     main()
+
